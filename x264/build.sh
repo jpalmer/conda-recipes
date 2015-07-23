@@ -24,7 +24,7 @@ LinuxInstallation() {
         --enable-pic \
         --enable-shared \
         --prefix=${PREFIX} || return 1;
-    make || return 1;
+    make -j - || return 1;
     make install || return 1;
 
     return 0;

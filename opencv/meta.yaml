@@ -1,12 +1,11 @@
 # Tested on Mac OS X 10.9 using clang compiler provided by XCode
 package:
     name: opencv
-    version: 2.4.9
+    version: 3.0.0
 
 source:
-    fn: opencv-2.4.9.zip
-    url: http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.9/opencv-2.4.9.zip
-
+    fn: opencv-3.0.0.zip
+    url: https://github.com/Itseez/opencv/archive/3.0.0.zip
 build:
     number: 0
 
@@ -18,12 +17,18 @@ requirements:
         - zlib
         - libpng
         - python
+        - ffmpeg
+        - x264
+        - openssl
     run:
         - python
         - numpy
         - jpeg
         - zlib
         - libpng
+        - ffmpeg
+        - x264
+        - openssl
 test:
     imports:
       - cv2
